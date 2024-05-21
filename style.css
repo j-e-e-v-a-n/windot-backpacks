@@ -233,6 +233,7 @@
             font-weight: 300;
         }
         .cartTab .btn{
+            height: 80px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
@@ -299,4 +300,9 @@
             height: 300px;
             filter: drop-shadow(rgba(0, 0, 0, 0.6) 0px 50px 20px);
         }
-    
+        .totalPrice{
+            padding-left: 20px;
+        }
+        p{
+            padding-left: 20px;
+        }
