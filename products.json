@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name":" Stylish Backpack",
+        "price": 200,
+        "image": "images/1-Photoroom.png-Photoroom.png"
+    },
+    {
+        "id": 2,
+        "name":" Leather Messenger Bag",
+        "price": 250,
+        "image": "images/2-Photoroom.png-Photoroom.png"
+    },
+    {
+        "id": 3,
+        "name":" Canvas Tote Bag",
+        "price": 290,
+        "image": "images/3-Photoroom.png-Photoroom.png"
+    },
+    {
+        "id": 4,
+        "name":" Stylish Backpack",
+        "price": 200,
+        "image": "images/4-Photoroom.png-Photoroom.png"
+    },
+    {
+        "id": 5,
+        "name":" Leather Messenger Bag",
+        "price": 300,
+        "image": "images/5-Photoroom.png-Photoroom.png"
+    },
+    {
+        "id": 6,
+        "name":" Canvas Tote Bag",
+        "price": 200,
+        "image": "images/1-Photoroom.png-Photoroom.png"
+    },
+    {
+        "id": 7,
+        "name":" Stylish Backpack",
+        "price": 200,
+        "image": "images/2-Photoroom.png-Photoroom.png"
+    },
+    {
+        "id": 8,
+        "name":" Leather Messenger Bag ",
+        "price": 200,
+        "image": "images/3-Photoroom.png-Photoroom.png"
+    }
+
+]
