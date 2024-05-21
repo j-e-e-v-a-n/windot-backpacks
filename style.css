@@ -141,7 +141,7 @@
 
 
         .container{
-            width: 900px;
+            width: 100%;
             margin: auto;
             max-width: 90vw;
             text-align: center;
@@ -183,13 +183,17 @@
         }
         .listProduct{
             display: grid;
+            width: 100%;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
         }
         .listProduct .item{
             background-color: #EEEEE6;
             padding: 20px;
+            margin-bottom: 32px;
+            margin-top: 32px;
             border-radius: 20px;
+            border: 1px solid #ccc;
         }
         .listProduct .item h2{
             font-weight: 500;
@@ -300,9 +304,16 @@
             height: 300px;
             filter: drop-shadow(rgba(0, 0, 0, 0.6) 0px 50px 20px);
         }
+        .listProduct .item img:hover {
+            transform: scaleX(-1);
+        }
         .totalPrice{
             padding-left: 20px;
         }
         p{
             padding-left: 20px;
         }
+
+
+
+        

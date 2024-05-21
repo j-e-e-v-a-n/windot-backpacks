@@ -3,11 +3,11 @@
         "id": 1,
         "name":" Stylish Backpack",
         "price": 200,
-        "image": "images/1-Photoroom.png-Photoroom.png"
+        "image": "images/5-Photoroom.png-Photoroom.png"
     },
     {
         "id": 2,
-        "name":" Leather Bag",
+        "name":" Leather Bakpack",
         "price": 250,
         "image": "images/2-Photoroom.png-Photoroom.png"
     },
@@ -33,7 +33,7 @@
         "id": 6,
         "name":" Canvas Tote Bag",
         "price": 200,
-        "image": "images/1-Photoroom.png-Photoroom.png"
+        "image": "images/4-Photoroom.png-Photoroom.png"
     },
     {
         "id": 7,
