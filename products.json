@@ -1,51 +1,58 @@
 [
     {
         "id": 1,
-        "name":" Stylish Backpack",
+        "name": "Stylish Backpack",
         "price": 200,
+        "description": "A trendy and fashionable backpack for everyday use.",
         "image": "images/5-Photoroom.png-Photoroom.png"
     },
     {
         "id": 2,
-        "name":" Leather Bakpack",
+        "name": "Leather Bakpack",
         "price": 250,
+        "description": "A premium quality leather backpack with multiple compartments.",
         "image": "images/2-Photoroom.png-Photoroom.png"
     },
     {
         "id": 3,
-        "name":" Canvas Tote Bag",
+        "name": "Canvas Tote Bag",
         "price": 290,
+        "description": "A durable canvas tote bag perfect for carrying groceries or books.",
         "image": "images/3-Photoroom.png-Photoroom.png"
     },
     {
         "id": 4,
-        "name":" Stylish Backpack",
+        "name": "Stylish Backpack",
         "price": 200,
+        "description": "Another stylish backpack option with a unique design.",
         "image": "images/4-Photoroom.png-Photoroom.png"
     },
     {
         "id": 5,
-        "name":" Leather Bag",
+        "name": "Leather Bag",
         "price": 300,
+        "description": "A luxurious leather bag with a classic and elegant look.",
         "image": "images/5-Photoroom.png-Photoroom.png"
     },
     {
         "id": 6,
-        "name":" Canvas Tote Bag",
+        "name": "Canvas Tote Bag",
         "price": 200,
+        "description": "Another variant of the canvas tote bag, lightweight and spacious.",
         "image": "images/4-Photoroom.png-Photoroom.png"
     },
     {
         "id": 7,
-        "name":" Stylish Backpack",
+        "name": "Stylish Backpack",
         "price": 200,
+        "description": "Yet another stylish backpack option, perfect for school or travel.",
         "image": "images/2-Photoroom.png-Photoroom.png"
     },
     {
         "id": 8,
-        "name":" Leather Bag ",
+        "name": "Leather Bag ",
         "price": 200,
+        "description": "A versatile leather bag suitable for both casual and formal occasions.",
         "image": "images/3-Photoroom.png-Photoroom.png"
     }
-
 ]
