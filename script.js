@@ -167,4 +167,26 @@ const initApp = () => {
         });
 };
 
+
+
+
+// JavaScript code
+
+function search_animal() {
+    let input = document.getElementById('searchbar').value.toLowerCase();
+    let items = document.querySelectorAll('.item');
+
+    items.forEach(item => {
+        let productName = item.querySelector('.prqua h2').innerText.toLowerCase();
+        if (!productName.includes(input)) {
+            item.style.display = "none";
+        } else {
+            item.style.display = "block"; // Or any other appropriate display value
+        }
+    });
+}
+
+  
+  
+
 initApp();

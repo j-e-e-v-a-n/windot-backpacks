@@ -316,4 +316,36 @@
 
 
 
+
+ 
+        .search-container {
+            width: 700px;
+            margin: 50px auto;
+          }
+        
+          #searchbar {
+            width: 100%;
+            padding: 10px;
+            border: 0.5px solid;
+            height: 40px;
+            border-radius: 10px; /* Rounded corners */
+            border-color: #686d6c;
+            background-color: #daf2f7; /* light blue */
+            color: #333; /* dark grey */
+            font-size: 16px;
+            box-sizing: border-box;
+          }
+        
+          #searchbar::placeholder {
+            color: #999; /* light grey */
+          }
+        
+          /* Style for when the input is focused */
+          #searchbar:focus {
+            outline: none;
+            background-color: #ffffff; /* lighter blue */
+          }
+          
+
+
         
