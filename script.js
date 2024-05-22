@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 total += product.price * item.quantity;
             }
         });
-        totalPriceElement.innerText = `Total Price: $${total.toFixed(2)}`;
+        totalPriceElement.innerText = `Total Price: ₹${total.toFixed(2)}`;
     };
 
     const addDataToHTML = () => {
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 <img src="${product.image}" alt="${product.name}" class="productImage">
                 <div class="prqua">
                     <h2>${product.name}</h2>
-                    <div class="price">$${product.price}</div>
+                    <div class="price">₹${product.price}</div>
                     <button class="addCart">Add To Cart</button>
                 </div>`;
                 listProductHTML.appendChild(newProduct);
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 <div class="name">
                     ${info.name}
                 </div>
-                <div class="totalPrice">$${info.price * item.quantity}</div>
+                <div class="totalPrice">₹${info.price * item.quantity}</div>
                 <div class="quantity">
                     <span class="minus"><</span>
                     <span>${item.quantity}</span>
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             modalImage.src = product.image;
             modalName.innerText = product.name;
             modalDescription.innerText = product.description || 'No description available.';
-            modalPrice.innerText = `$${product.price}`;
+            modalPrice.innerText = `₹ ${product.price}`;
             modal.style.display = "block";
         }
     };
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             <img src="${product.image}" alt="${product.name}" class="productImage">
             <div class="prqua">
                 <h2>${product.name}</h2>
-                <div class="price">$${product.price}</div>
+                <div class="price">₹${product.price}</div>
                 <button class="addCart">Add To Cart</button>
             </div>`;
             listProductHTML.appendChild(newProduct);

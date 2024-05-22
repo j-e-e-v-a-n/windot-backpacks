@@ -333,7 +333,7 @@
             width: 90%;
             object-fit: cover;
             height: 300px;
-            filter: drop-shadow(rgba(0, 0, 0, 0.6) 0px 50px 20px);
+            filter: drop-shadow(rgba(29, 22, 70, 0.6) 0px 50px 20px);
         }
         .listProduct .item img:hover {
             transform: scaleX(-1);
@@ -417,18 +417,23 @@
 }
 
 .modal img {
-    width: 100%;
-    height: auto;
+    width: 251PX;
+    height: 450PX;
+
 }
+
 
 .modal-content #modalInfo {
     margin-top: 20px;
-}
+}   
 
 .modal-content #modalPrice {
     font-size: 1.5em;
     color: green;
+    margin-left: 5PX;
     margin-top: 10px;
 }
-
+.kujava{
+    text-align: center;
+}
         
