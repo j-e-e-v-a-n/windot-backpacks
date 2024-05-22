@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             modalImage.src = product.image;
             modalName.innerText = product.name;
             modalDescription.innerText = product.description || 'No description available.';
-            modalPrice.innerText = `₹ ${product.price}`;
+            modalPrice.innerText = `₹${product.price}`;
             modal.style.display = "block";
         }
     };
