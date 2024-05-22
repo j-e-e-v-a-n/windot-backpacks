@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const closeModal = document.querySelector('.closeModal');
     let products = [];
     let cart = [];
+    let totalPriceElement = document.querySelector('#totalPrice');
 
     iconCart.addEventListener('click', () => {
         body.classList.toggle('showCart');
@@ -21,6 +22,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
     closeCart.addEventListener('click', () => {
         body.classList.toggle('showCart');
     });
+
+    const updateTotalPrice = () => {
+        let total = 0;
+        cart.forEach(item => {
+            let product = products.find(p => p.id == item.product_id);
+            if (product) {
+                total += product.price * item.quantity;
+            }
+        });
+        totalPriceElement.innerText = `Total Price: $${total.toFixed(2)}`;
+    };
 
     const addDataToHTML = () => {
         listProductHTML.innerHTML = '';
@@ -69,6 +81,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
         addCartToHTML();
         addCartToMemory();
+        updateTotalPrice(); // Update total price
     };
 
     const addCartToMemory = () => {
@@ -104,6 +117,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
         }
         iconCartSpan.innerText = totalQuantity;
+        updateTotalPrice(); // Update total price
     };
 
     listCartHTML.addEventListener('click', (event) => {
@@ -131,6 +145,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
         addCartToHTML();
         addCartToMemory();
+        updateTotalPrice(); // Update total price
     };
 
     const generateWhatsAppLink = () => {
@@ -185,9 +200,31 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 if (localStorage.getItem('cart')) {
                     cart = JSON.parse(localStorage.getItem('cart'));
                     addCartToHTML();
+                    updateTotalPrice(); // Update total price on initialization
                 }
             });
     };
+
+    const search_animal = () => {
+        const searchInput = document.getElementById('searchbar').value.toLowerCase();
+        const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchInput));
+        listProductHTML.innerHTML = '';
+        filteredProducts.forEach(product => {
+            let newProduct = document.createElement('div');
+            newProduct.dataset.id = product.id;
+            newProduct.classList.add('item');
+            newProduct.innerHTML = `
+            <img src="${product.image}" alt="${product.name}" class="productImage">
+            <div class="prqua">
+                <h2>${product.name}</h2>
+                <div class="price">$${product.price}</div>
+                <button class="addCart">Add To Cart</button>
+            </div>`;
+            listProductHTML.appendChild(newProduct);
+        });
+    };
+
+    document.getElementById('searchbar').addEventListener('keyup', search_animal);
 
     initApp();
 });
