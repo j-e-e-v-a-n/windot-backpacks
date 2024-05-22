@@ -95,17 +95,22 @@
         }
 
         footer {
-            background-color: #315c75;
-            color: #fff;
-            padding: 20px;
+            background-color: #333;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px;
+        }
+        
+        .credit {
             text-align: center;
-            flex-shrink: 0;
+            color: #ccc;
+            font-size: 14px;
         }
-
-        footer p {
-            margin: 0;
-        }
-
+        
+        
         a {
             color: #fff;
             text-decoration: none;
@@ -191,6 +196,9 @@
             position: relative;
             justify-content: space-between;
             
+        }
+        .icon-cart:hover{
+            cursor: pointer;
         }
         .icon-cart span{
             position: absolute;
@@ -437,3 +445,11 @@
     text-align: center;
 }
         
+
+
+
+
+
+
+
+
