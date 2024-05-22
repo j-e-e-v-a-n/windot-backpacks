@@ -223,6 +223,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
             listProductHTML.appendChild(newProduct);
         });
     };
+    const priceSortSelect = document.getElementById('priceSort');
+
+priceSortSelect.addEventListener('change', () => {
+    const sortBy = priceSortSelect.value;
+    if (sortBy === 'lowToHigh') {
+        products.sort((a, b) => a.price - b.price); // Sort by ascending price
+    } else if (sortBy === 'highToLow') {
+        products.sort((a, b) => b.price - a.price); // Sort by descending price
+    }
+    addDataToHTML(); // Update the displayed products after sorting
+});
+
 
     document.getElementById('searchbar').addEventListener('keyup', search_animal);
 

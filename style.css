@@ -139,9 +139,38 @@
             }
         }
 
+/* CSS for select element */
+#priceSort {
+    appearance: none; /* Remove default styling */
+    background-color: #e0e6ec; /* Background color */
+    border: 1px solid #ccc; /* Border */
+    height: 40px;
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 12px; /* Padding */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+    cursor: pointer; /* Cursor on hover */
+    align-items: center;
+    outline: none; /* Remove outline */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    
+}
+
+#priceSort:focus {
+    background-color: white;
+    border-color: #007bff; /* Border color on focus */
+}
+
+/* Right-align select element */
+.container {
+    display: flex;
+    justify-content: flex-end; /* Align elements to the right */
+    align-items: center; /* Center vertically */
+    margin-top: 20px; /* Add margin to separate from other content */
+}
 
         .container{
-            width: 100%;
+            width: 90%;
             margin: auto;
             max-width: 90vw;
             text-align: center;
@@ -156,10 +185,12 @@
             width: 100%;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 20px 15px;
         }
         .icon-cart{
             position: relative;
+            justify-content: space-between;
+            
         }
         .icon-cart span{
             position: absolute;
@@ -320,7 +351,7 @@
  
         .search-container {
             width: 700px;
-            margin: 50px auto;
+            margin: 30px auto;
           }
         
           #searchbar {
@@ -328,8 +359,8 @@
             padding: 10px;
             border: 0.5px solid;
             height: 40px;
-            border-radius: 10px; /* Rounded corners */
-            border-color: #686d6c;
+            border-radius: 5px; /* Rounded corners */
+            border-color: #818685b7;
             background-color: #e0e6ec; /* light blue */
             color: #333; /* dark grey */
             font-size: 16px;
@@ -344,7 +375,7 @@
           #searchbar:focus {
             outline: none;
             background-color: #ffffff; /* lighter blue */
-          }
+            }
           
 
 /* Modal styling */
