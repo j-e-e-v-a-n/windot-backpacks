@@ -173,9 +173,15 @@
     
     // Check if any field is empty
     if (!name && !email && !phone) {
-                document.getElementById('notificationPopup').classList.add('show');
-                return;
-            }
+        document.getElementById('notificationPopup').classList.add('show');
+        
+        // Set a timer to hide the notification after 3 seconds (3000 milliseconds)
+        setTimeout(function() {
+            document.getElementById('notificationPopup').classList.remove('show');
+        }, 3000);
+        
+        return;
+    }
     
     const message = `Hello, my name is ${name}. My email is ${email} and my phone number is ${phone}.`;
     const encodedMessage = encodeURIComponent(message);
