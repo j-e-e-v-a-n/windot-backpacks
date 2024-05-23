@@ -153,6 +153,9 @@
         <input type="tel" id="phone" placeholder="Your Phone Number">
         <button onclick="sendWhatsApp()">Submit</button>
     </div>
+    <div id="notificationPopup" class="notification">
+        <span class="notificationMessage">Please fill the required details before submitting.</span>
+    </div>
 
     <footer>
         <div class="footer-content">
@@ -164,15 +167,22 @@
 
     <script>
         function sendWhatsApp() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = `Hello, my name is ${name}. My email is ${email} and my phone number is ${phone}.`;
-            const encodedMessage = encodeURIComponent(message);
-            const phoneNumber = '8113064544'; // Replace with your phone number
-            const link = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-            window.open(link, '_blank');
-        }
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    
+    // Check if any field is empty
+    if (!name && !email && !phone) {
+                document.getElementById('notificationPopup').classList.add('show');
+                return;
+            }
+    
+    const message = `Hello, my name is ${name}. My email is ${email} and my phone number is ${phone}.`;
+    const encodedMessage = encodeURIComponent(message);
+    const phoneNumber = '8113064544'; // Replace with your phone number
+    const link = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(link, '_blank');
+}
     </script>
 </body>
 

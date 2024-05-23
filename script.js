@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const iconCartSpan = document.querySelector('.icon-cart span');
     const body = document.querySelector('body');
     const closeCart = document.querySelector('.close');
+    const shopLink = document.querySelector('.shop-link');
     const checkOutButton = document.querySelector('.checkOut');
     const modal = document.getElementById('productModal');
     const modalImage = document.getElementById('modalImage');
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const modalDescription = document.getElementById('modalDescription');
     const modalPrice = document.getElementById('modalPrice');
     const closeModal = document.querySelector('.closeModal');
+    const notificationPopup = document.getElementById('notificationPopup');
     let products = [];
     let cart = [];
     let totalPriceElement = document.querySelector('#totalPrice');
@@ -19,10 +21,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     iconCart.addEventListener('click', () => {
         body.classList.toggle('showCart');
     });
+
     closeCart.addEventListener('click', () => {
         body.classList.toggle('showCart');
     });
 
+    shopLink.addEventListener('click', () => {
+        body.classList.toggle('showCart');
+    });
+
+    
     const updateTotalPrice = () => {
         let total = 0;
         cart.forEach(item => {
@@ -81,7 +89,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
         addCartToHTML();
         addCartToMemory();
-        updateTotalPrice(); // Update total price
+        updateTotalPrice();
     };
 
     const addCartToMemory = () => {
@@ -117,7 +125,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
         }
         iconCartSpan.innerText = totalQuantity;
-        updateTotalPrice(); // Update total price
+        updateTotalPrice();
     };
 
     listCartHTML.addEventListener('click', (event) => {
@@ -145,12 +153,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
         addCartToHTML();
         addCartToMemory();
-        updateTotalPrice(); // Update total price
+        updateTotalPrice();
+    };
+
+    const showNotificationPopup = () => {
+        notificationPopup.classList.add('show');
+        setTimeout(() => {
+            notificationPopup.classList.remove('show');
+        }, 3000); // Hide after 3 seconds
     };
 
     const generateWhatsAppLink = () => {
         if (cart.length === 0) {
-            alert('Your cart is empty. Please add products to your cart before checking out.');
+            showNotificationPopup();
             return;
         }
 
@@ -200,7 +215,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 if (localStorage.getItem('cart')) {
                     cart = JSON.parse(localStorage.getItem('cart'));
                     addCartToHTML();
-                    updateTotalPrice(); // Update total price on initialization
+                    updateTotalPrice();
                 }
             });
     };
@@ -223,18 +238,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
             listProductHTML.appendChild(newProduct);
         });
     };
+
     const priceSortSelect = document.getElementById('priceSort');
 
-priceSortSelect.addEventListener('change', () => {
-    const sortBy = priceSortSelect.value;
-    if (sortBy === 'lowToHigh') {
-        products.sort((a, b) => a.price - b.price); // Sort by ascending price
-    } else if (sortBy === 'highToLow') {
-        products.sort((a, b) => b.price - a.price); // Sort by descending price
-    }
-    addDataToHTML(); // Update the displayed products after sorting
-});
-
+    priceSortSelect.addEventListener('change', () => {
+        const sortBy = priceSortSelect.value;
+        if (sortBy === 'lowToHigh') {
+            products.sort((a, b) => a.price - b.price);
+        } else if (sortBy === 'highToLow') {
+            products.sort((a, b) => b.price - a.price);
+        }
+        addDataToHTML();
+    });
 
     document.getElementById('searchbar').addEventListener('keyup', search_animal);
 
