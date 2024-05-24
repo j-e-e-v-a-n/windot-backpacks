@@ -530,7 +530,7 @@ footer {
         right: auto;
         top: 80%;
         left: 70%;
-        transform: translate(50%, 0%);
+        transform: translate(50%, 0);
         width: 300px;
         height: 50px;
         font-size: 18px;
