@@ -94,21 +94,7 @@
             color: #555;
         }
 
-        footer {
-            background-color: #333;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-around;
-            margin: 10px;
-        }
-        
-        .credit {
-            text-align: center;
-            color: #ccc;
-            font-size: 14px;
-        }
+
         
         
         a {
@@ -343,8 +329,10 @@
             height: 300px;
             filter: drop-shadow(rgba(29, 22, 70, 0.6) 0px 50px 20px);
         }
-        .listProduct .item img:hover {
-            transform: scaleX(-1);
+        @media (min-width: 992px) {
+            .listProduct .item img:hover {
+                transform: scaleX(-1);
+            }
         }
         .total-price{
             padding-left: 10px;
@@ -467,6 +455,47 @@
 .notification.show {
     display: block;
 }
+
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    margin-top: 50px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.credit {
+    color: #ccc;
+    font-size: 14px;
+    margin: 0;
+}
+
+.credit a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.credit a:hover {
+    text-decoration: underline;
+}
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         
 
 
