@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const modalPrice = document.getElementById('modalPrice');
     const closeModal = document.querySelector('.closeModal');
     const notificationPopup = document.getElementById('notificationPopup');
+    const notificationPopupp = document.getElementById('notificationPopupp');
     let products = [];
     let cart = [];
     let totalPriceElement = document.querySelector('#totalPrice');
@@ -90,6 +91,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         addCartToHTML();
         addCartToMemory();
         updateTotalPrice();
+        showNotificationPopupp(); // Show the notification popup
     };
 
     const addCartToMemory = () => {
@@ -205,6 +207,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
             modal.style.display = "none";
         }
     };
+
+
+const showNotificationPopupp = () => {
+    notificationPopupp.classList.add('show');
+    setTimeout(() => {
+        notificationPopupp.classList.remove('show');
+    }, 800); // Hide after 3 seconds
+};
+
+
 
     const initApp = () => {
         fetch('products.json')
